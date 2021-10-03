@@ -23,7 +23,7 @@
     "nodemon": "^1.18.3",
     "passport": "^0.4.0",
     "passport-local": "^1.0.0",
-    "pug": "^2.0.3",
+    "pug": "^3.0.1",
     "socket.io": "^4.2.0",
     "uuid": "^8.3.2",
     "wysiwyg-editor-node-sdk": "^2.3.4"

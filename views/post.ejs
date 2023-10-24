@@ -66,10 +66,11 @@
                     <span>Post Tags</span>
 
                     <span class="s-content__tag-list">
-                        <a href="#0">orci</a>
-                        <a href="#0">lectus</a>
-                        <a href="#0">varius</a>
-                        <a href="#0">turpis</a>
+                        <%if(post.categories.length > 0){%>
+                            <% for(var i=0; i<post.categories.length; i++) { %>
+                                <a href="#0"><%= post.categories[i] %></a>
+                            <% } %>
+                        <%}%>
                     </span>
                 </p> <!-- end s-content__tags -->
 
@@ -79,7 +80,7 @@
 
                     <div class="s-content__author-about">
                         <h4 class="s-content__author-name">
-                            <a href="#0">Vũ Tự Kiên</a>
+                            <a href="#0">Knight Root</a>
                         </h4>
                     
                         <p>This is my blog where I share what I want to.

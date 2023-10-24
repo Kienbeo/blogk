@@ -26,7 +26,11 @@
 
                     <% if(posts[0]){ %>
                     <div class="featured__column featured__column--big">
+                        <% if(posts[0].image_url){ %>
                         <div class="entry" style="background-image:url('<%= posts[0].image_url %>');">
+                        <% } else { %>
+                        <div class="entry" style="background-image:url('/images/default-post-image.jpg');">
+                        <% } %>
                             
                             <div class="entry__content">
                                 <!-- <span class="entry__category"><a href="#0">Music</a></span> -->
@@ -39,7 +43,7 @@
                                     </a>
 
                                     <ul class="entry__meta">
-                                        <li><a href="#"><%= posts[0].user %></a></li>
+                                        <li><a href="#">KR</a></li>
                                         <li><%= posts[0].dateOfCreate.toLocaleDateString() %></li>
                                     </ul>
                                 </div>
@@ -52,7 +56,11 @@
                     <div class="featured__column featured__column--small">
 
                         <% if(posts[1]){ %>
+                        <% if(posts[1].image_url){ %>
                         <div class="entry" style="background-image:url('<%= posts[1].image_url %>');">
+                        <% } else { %>
+                        <div class="entry" style="background-image:url('/images/default-post-image.jpg');">
+                        <% } %>
                             
                             <div class="entry__content">
                                 <!-- <span class="entry__category"><a href="#0">Management</a></span> -->
@@ -65,7 +73,7 @@
                                     </a>
 
                                     <ul class="entry__meta">
-                                        <li><a href="#"><%= posts[1].user %></a></li>
+                                        <li><a href="#">KR</a></li>
                                         <li><%= posts[1].dateOfCreate.toLocaleDateString() %></li>
                                     </ul>
                                 </div>
@@ -75,7 +83,11 @@
                         <% } %>
 
                         <% if(posts[2]){ %>
+                        <% if(posts[2].image_url){ %>
                         <div class="entry" style="background-image:url('<%= posts[2].image_url %>');">
+                        <% } else { %>
+                        <div class="entry" style="background-image:url('/images/default-post-image.jpg');">
+                        <% } %>
 
                             <div class="entry__content">
                                 <!-- <span class="entry__category"><a href="#0">LifeStyle</a></span> -->
@@ -88,7 +100,7 @@
                                     </a>
 
                                     <ul class="entry__meta">
-                                        <li><a href="#"><%= posts[2].user %></a></li>
+                                        <li><a href="#">KR</a></li>
                                         <li><%= posts[2].dateOfCreate.toLocaleDateString() %></li>
                                     </ul>
                                 </div>
@@ -141,7 +153,11 @@
                         
                     <div class="entry__thumb">
                         <a href="/post/show/<%=posts[i]._id%>" class="entry__thumb-link">
-                            <img src="<%=  posts[i].image_url %>" alt="">
+                            <% if(posts[i].image_url) { %>
+                                <img src="<%=  posts[i].image_url %>" alt="">
+                            <% } else { %>
+                                <img src="/images/default-post-image.jpg" alt="">
+                            <% } %>
                         </a>
                     </div>
     

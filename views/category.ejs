@@ -49,7 +49,7 @@
                         <blockquote>
                                 <p>Color my life with chaos of trouble.</p>
 
-                                <cite>Koas</cite>
+                                <cite>Summer Finn</cite>
                         </blockquote>
                     </div>
                 </article> <!-- end article -->
@@ -60,7 +60,11 @@
                         
                     <div class="entry__thumb">
                         <a href="/post/show/<%=posts[i]._id%>" class="entry__thumb-link">
-                            <img src="<%=  posts[i].image_url %>" alt="">
+                            <% if(posts[i].image_url) { %>
+                                <img src="<%=  posts[i].image_url %>" alt="">
+                            <% } else { %>
+                                <img src="/images/default-post-image.jpg" alt="">
+                            <% } %>
                         </a>
                     </div>
     

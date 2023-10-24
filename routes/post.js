@@ -206,7 +206,7 @@ router.get('/show/:id', async function(req, res, next){
 
 		if(!post) return res.send("404 not found");
 		
-		// return res.send(post);
+		console.log('post: ', post)
 
 		res.render('post', {
 			title: 'Post',
